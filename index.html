@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grocery Store</title>
+    <link rel="shortcut icon" href="./assets/images/basket.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/stylesheets/main.css">
+    <link rel="stylesheet" href="./assets/stylesheets/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+    <script src="./assets/scripts/product.js"></script>
+    <script src="./assets/scripts/productoperation.js"></script>
+    <script defer src="./assets/scripts/controller.js"></script>
+    <script src="./assets/scripts/cartoperation.js"></script>
+    <script src="./assets/scripts/useroperation.js"></script>
+    <script src="./assets/scripts/user.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="loginBox" class="displayNone">
+        <div class="logBox">
+
+            <div class="username">
+                <div><span>UserName</span></div>
+                <div><input type="text" id="userName" required></div>
+            </div>
+
+            <div class="password">
+                <div><span>Password</span></div>
+                <div><input type="password" id="password" required></div>
+            </div>
+
+            <div id="rememberPasswordBox">
+                <div></div>
+                <div>
+                    <input type="checkbox" id="rememberPassword" required>
+                    <span>Remember Password</span>
+                </div>
+            </div>
+
+            <div id="logBtns">
+                <div><button id="forgotPassBtn"><span>Forgot Password</span></button></div>
+                <div><button id="loginBtn"><span>Login</span></button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="registrationBox" class="displayNone">
+        <div id="regBox">
+
+            <div class="email">
+                <div><span>Email ID</span></div>
+                <div><input type="email" id="regEmail"></div>
+            </div>
+
+
+            <div class="userName">
+                <div><span>UserName</span></div>
+                <div><input type="text" name="" id="regUserName"></div>
+            </div>
+
+            <div class="password">
+                <div><span>Password</span></div>
+                <div><input type="password" id="reg_password"></div>
+            </div>
+
+            <div class="password">
+                <div><span>Re-Password</span></div>
+                <div><input type="password" id="reType_password"></div>
+            </div>
+
+            <div class="DOB">
+                <div><span>Date Of Birth</span></div>
+                <div><input type="date" id="DOB"></div>
+            </div>
+
+            <div class="gender">
+                <div><span>Gender</span></div>
+                <div>
+                    <div id="genderSelect">
+                        <div>
+                            <div><span>Male</span></div>
+                            <div><input type="radio" name="gender" value='male'></div>
+                        </div>
+                        <div>
+                            <div><span>Female</span></div>
+                            <div><input type="radio" name="gender" value='female'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="regBtns">
+                <div><button id="regResetBtn">Reset</button></div>
+                <div><button id="registerBtn">Register</button></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div id="container">
+        <div id="banner">
+            <div class="menuBar">
+                <div id="login" class="">
+                    <i class="fas fa-user fa-2x"></i>
+                    <div><span>Login</span></div>
+                </div>
+
+                <div id="register" class="">
+                    <span>Register</span>
+                </div>
+
+                <div class="displayNone" id="userWelcome">
+                    <div><i class="fas fa-user fa-2x"></i></div>
+                    <div><span id="menuUsername"></span></div>
+                </div>
+
+                <div class="displayNone" id="logout">
+                        <div><i class="fas fa-sign-out-alt fa-2x"></i></div>
+                        <div><span id="logoutBtn">LogOut</span></div>
+                    </div>
+
+            </div>
+            <div id="cart">
+                <div class="title"><span>View Cart</span></div>
+                <i class="fas fa-shopping-cart fa-2x"></i>
+                <ul id="cartList">
+                    <li class="displayNone">
+                        <div class="cartItem">
+                            <div class="cartItemId"><span></span></div>
+                            <div class="cartItemImg"><img src="https://www.bigbasket.com/media/uploads/p/mm/10000066_25-fresho-cabbage.jpg"
+                                    alt="NA"></div>
+                            <div class="cartItemName"><span></span></div>
+                            <div><button class="removeFromCart_btn">Remove Item</button></div>
+                        </div>
+                    </li>
+
+            </div>
+        </div>
+        <div id="mainContent">
+            <div class="heading">
+                <h1>vegetables</h1>
+            </div>
+            <div class="category">
+                <ul class="productList" id='vegetable'>
+                    <li class="displayNone">
+                        <div class="productCard">
+                            <div class="productImage">
+                                <img src="" alt="NA">
+                            </div>
+                            <div class="productDetail">
+                                <div class="productName">
+                                    <span class="cardTitle k_name">Name</span>
+                                    <span></span>
+                                </div>
+                                <div class="productDescription">
+                                    <span class="cardTitle p_description">Description</span><span>
+                                    </span>
+                                </div>
+                                <div class="productId">
+                                    <span>ID : </span>
+                                    <span></span>
+                                </div>
+                                <div class="priceAndQty">
+                                    <div class="productPrice">
+                                        <span class="cardTitle p_price">Price</span>
+                                        <span class="price"></span>
+                                    </div>
+                                    <div class="productQty">
+                                        <span class="cardTitle p_qty">Quantity</span>
+                                        <span class="quantity"></span>
+                                    </div>
+                                </div>
+                                <div><button class="addToCard_btn"><i class="fas fa-shopping-cart"></i><span> Add To
+                                            Cart</span></button></div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+            </div>
+            <div class="heading">
+                <h1>fruits</h1>
+            </div>
+            <div class="category">
+                <ul class="productList" id='fruit'>
+                </ul>
+            </div>
+            <div class="heading">
+                <h1>miscllaneous</h1>
+            </div>
+            <div class="category">
+                <div class="category">
+                    <ul class="productList" id='miscllaneous'>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

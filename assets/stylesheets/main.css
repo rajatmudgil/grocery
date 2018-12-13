@@ -1,0 +1,462 @@
+body,
+ul,
+li {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 25px;
+    background-attachment: fixed;
+    background-image: url(../images/bg1.png);
+    background-repeat: repeat;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+#banner {
+    background-color: #84c225;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Righteous', cursive;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+#banner .menuBar {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menuBar > div:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#banner .menuBar div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+#login div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#cart {
+    flex-grow: 0.25;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: relative;
+}
+
+#cart:hover i {
+    color: white;
+}
+
+#cart:hover span {
+    color: pink;
+}
+
+#cart>.title {
+    align-self: center;
+}
+
+#cart>i {
+    color: gold;
+}
+
+#cartList {
+    position: absolute;
+    left: 10px;
+    top: 42px;
+    width: 100%;
+    display: none;
+}
+
+#cartList>li {
+    display: block;
+    border-bottom: 2px solid gray;
+}
+
+#cartList>li:last-child {
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.541);
+    align-items: center;
+    font-family: 'Bad Script', cursive;
+    font-weight: bold;
+    color: blue;
+    cursor: default;
+    padding-left: 5px;
+}
+
+.cartItem > div {
+    flex: 1;
+    margin-left: 5px;
+}
+
+.cartItem > .cartItemId {
+    flex: 0.2;
+}
+
+.cartItem:last-child {
+    text-align: center;
+}
+
+.removeFromCart_btn {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: coral;
+    cursor: pointer;
+    width: 90%;
+}
+
+.removeFromCart_btn:hover {
+    background-color: crimson;
+}
+
+.cartItem > .cartItemImg {
+    flex: 0.5;
+    height: auto;
+    display: flex;
+}
+
+.cartItemImg > img {
+    width: auto;
+    height: 70px;
+}
+
+.cartItem > .cartItemName {
+    text-align: center;
+}
+
+#cart:hover > #cartList {
+    display: block;
+}
+
+#mainContent {
+    margin-top: 100px;
+}
+
+.heading {
+    padding: 10px 10px;
+    margin: 0px;
+    background-color: #D4E4F7;
+    margin: 25px 0px 25px 0px;
+}
+
+.heading>h1 {
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    color: #341C09;
+    margin: 0px;
+    letter-spacing: 1px;
+}
+
+.category {
+    width: 100%;
+}
+
+.category ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.productList>li {
+    margin-bottom: 15px;
+}
+
+.productCard {
+    width: 250px;
+    height: 350px;
+    border: 1px rgb(76, 181, 230) solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 15px;
+    background-color: teal;
+    /* overflow: hidden; */
+}
+
+.productCard:hover {
+    box-shadow: 2px 2px 2px 2px #D4E4F7;
+}
+
+.productImage {
+    margin: 5px 5px 0px 5px;
+    flex-grow: 1;
+    overflow: hidden;
+    border: 0px solid black;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.productDetail {
+    padding: 8px 8px;
+    flex-grow: 1;
+}
+
+.productDetail:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productDetail:nth-child(3)>div {
+    flex: 1;
+}
+
+.priceAndQty {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardTitle {
+    font-family: 'Just Another Hand', cursive;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 10%;
+}
+
+.cardTitle::after {
+    align-self: center;
+    content: "  :  ";
+    font-weight: bold;
+}
+
+.addToCard_btn {
+    font-family: 'Just Another Hand', cursive;
+    font-weight: bold;
+    color: #B85B14;
+    background-color: #fee67c;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-style: solid;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px rgb(209, 204, 204);
+}
+
+.addToCard_btn:hover {
+    box-shadow: 0px 0px 2px 2px #FC7307;
+    cursor: pointer;
+}
+
+
+.addToCard_btn:disabled {
+    background-color: gray;
+}
+
+.displayNone {
+ display: none !important;   
+}
+
+#loginBox, #registrationBox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.541);
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#loginBox > .logBox{
+    width: 40%;
+    height: 30%;
+    align-self: center;
+    /* background-color: whitesmoke; */
+    background-image: url(../images/logBg.jpg);
+    border: 4px double black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#loginBox > .logBox > div {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+#loginBox > .logBox > div > div {
+    text-align: center;
+}
+
+#loginBox > .logBox > div > div:first-child {
+    width: 30%;
+}
+
+#loginBox > .logBox > div > div:nth-child(2) {
+    width: 60%;
+}
+
+#rememberPasswordBox div:nth-child(2){
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#rememberPasswordBox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+#loginBox input[type="text"],#loginBox input[type="password"] {
+    width: 100%;
+}
+
+#loginBox .logBox {
+    font-family: 'Righteous', cursive;
+}
+
+#logBtns {
+    width: 100%;
+}
+
+#logBtns div {
+    all: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
+
+#logBtns button, #regBtns button {
+    width: 50%;
+    border: 4px double gray;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#logBtns button:hover, #regBtns button:hover {
+    border-color: crimson;
+    background-color: coral;
+}
+
+#regBox {
+    width: 40%;
+    height: 50%;
+    align-self: center;
+    /* background-color: whitesmoke; */
+    background-image: url(../images/regBG1.jpg);
+    border: 4px double black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Righteous', cursive;
+    overflow: hidden;
+}
+
+#regBox>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+}
+
+#regBox input {
+    width: 80%;
+}
+
+#regBox>div>div{
+    text-align: center;
+}
+#regBox>div>div {
+    flex: 0.5;
+}
+
+#regBox>div>div:nth-child(2) {
+    flex: 1;
+}
+
+.gender > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+#genderSelect {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#genderSelect>div{
+    display: flex;
+    flex-direction: row;
+}
+
+#genderSelect > div > div:first-child {
+    text-align: left;
+    flex: 0.5;
+}
+
+#genderSelect > div > div:nth-child(2) {
+    flex: 1;
+}
+
+#regBox > #regBtns > div {
+    flex: 1;
+}
+
+#userWelcome {
+    text-transform: uppercase;
+    color : yellow;
+}
+
+#userWelcome:hover {
+    color : whitesmoke;
+}
+
+#userWelcome , #logout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
